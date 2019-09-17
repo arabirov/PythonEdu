@@ -1,26 +1,26 @@
-try:	# выполнение инструкции, которая может породить исключение
-	a = 100/0
-except ZeroDivisionError:	# перехват и обработка исключения
-	print ('A error')
+try:  # выполнение инструкции, которая может породить исключение
+    a = 100 / 0
+except ZeroDivisionError:  # перехват и обработка исключения
+    print('A error')
 
 try:
-	b = 2 + '1'
+    b = 2 + '1'
 except TypeError:
-	print ('B error')
+    print('B error')
 
 try:
-	c = int('qwerty')
+    c = int('qwerty')
 except ValueError:
-	print ('C error')
+    print('C error')
 
 d = input("Type something: \n")
 try:
-	e = 100/int(d)
+    e = 100 / int(d)
 except ZeroDivisionError:
-	print ("Can't divide by zero!")
+    print("Can't divide by zero!")
 except ValueError:
-	print ("Can't divide without numbers!")
-else:	# инструкция выполнится, если исключения не было
-	print ("Result = ", e)
-finally:	# инструкця выполнится в любом случае
-	print ("Thanks, bye!")
+    print("Can't divide without numbers!")
+else:  # инструкция выполнится, если исключения не было
+    print("Result = ", e)
+finally:  # инструкця выполнится в любом случае
+    print("Thanks, bye!")
