@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sshpass -f <(printf '%s\n' zoomcallrec) ssh -o "UserKnownHostsFile=/dev/null" -o "StrictHostKeyChecking=no" admin@10.17.2.81
