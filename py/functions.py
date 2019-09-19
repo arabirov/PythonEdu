@@ -12,14 +12,14 @@ def add(x, y):  # создание функции, передача аругме
 print(add(a, b))
 
 
-def newfunc(n):
-    def myfunc(l):
+def new_func(n):
+    def my_func(l):
         return n + l
 
-    return myfunc
+    return my_func
 
 
-new = newfunc(100)  # передаётся ссылка на myfunc, 100 берётся из области видимости newfunc
+new = new_func(100)  # передаётся ссылка на myfunc, 100 берётся из области видимости newfunc
 print(new(
     200))  # передаётся 200 в myfunc, результат 300, т.к. 200 находится в области видимости myfunc, а 100 в области видимости выше
 

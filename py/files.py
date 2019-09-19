@@ -35,6 +35,7 @@ while genIndex < 15:
         fileWrite.write(index)
         fileWrite.write('End')
         fileWrite.close()
+
 testVar = [str(i) + str(i - 1) for i in range(20)]  # генерация списка
 print(testVar)
 fileWrite2 = open('../files/genTest2.txt', 'w')

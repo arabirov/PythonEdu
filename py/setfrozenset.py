@@ -1,5 +1,3 @@
-import random
-
 a = set()
 print(a)
 a = set('hello')
