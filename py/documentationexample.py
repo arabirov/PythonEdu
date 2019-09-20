@@ -4,7 +4,6 @@ def new_func(n):
     """
     def my_func(l):
         return n + l
-
     return my_func
 
 
