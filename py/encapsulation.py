@@ -1,29 +1,3 @@
-class A:  # создание класса
-    pass
-
-
-a = A()  # создание экземпляра класса
-b = A()
-
-a.arg = 1  # добавление атрибута arg экземпляру a
-b.arg = 2
-
-print(a.arg, b.arg)
-
-
-class B:
-    def g(self):
-        """self - обязательный аргумент
-        содержащий в себе экземпляр класса,
-        передающийся при вызове метода.
-        """
-        return 'Hello world!'
-
-
-c = B()
-print(c.g())
-
-
 class C:
     arg = "Hi"
     """все экземпляры этого класса будут иметь атрибут arg"""
@@ -38,7 +12,14 @@ class C:
             index += 1
             if index >= position:
                 return fibo
-        return self.arg
+        # return self.arg
+
+    def _private(self):
+        """_ делает атрибут(метод) приватным, доступным только внутри методов класса"""
+        return "This is private method!"
+    def __private(self):
+        """__ делает атрибут(метод) недоступным по имени"""
+        return "This also is private method!"
 
 
 your_number = input("Enter number: \n")
@@ -48,5 +29,5 @@ if your_number.isdigit() and int(your_number) > 0:
 else:
     print("Please, use only positive digits")
 print(new_fibo.arg)
-new_fibo.arg = "Not Hi"
-print(new_fibo.arg)
+print(new_fibo._private())
+print(new_fibo._C__private())  # атрибут с __ остается доступным под именем _ИмяКласса__ИмяАтрибута
