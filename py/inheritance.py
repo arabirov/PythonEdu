@@ -10,4 +10,3 @@ a = dict(a=1, b=2, c=3)
 b = MyList(a=1, b=2, c=3)
 b['d'] = 4
 print(a, '\n', b, '\n', a.get('v'), '\n', b.get('v'))
-
