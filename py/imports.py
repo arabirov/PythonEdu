@@ -2,6 +2,8 @@ import math as m  # использование псевдонима
 import time
 import os
 import my_fibonacci  # импорт собственного модуля
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from pathlib import Path  # импорт конкретного атрибута
 from sys import *  # импорт конкретного атрибута
