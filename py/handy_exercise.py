@@ -25,9 +25,14 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # is_prime_arg_input = input("Input digit from 0 to 1000: \n")
 # if is_prime_arg_input.isdigit() and 0 <= int(is_prime_arg_input) <= 1000:
 #     exercise.is_prime(int(is_prime_arg_input))
+#
+# day_input = int(input("Input day: \n"))
+# month_input = int(input("Input month: \n"))
+# year_input = int(input("Input year: \n"))
+# exercise.date_exists(day_input, month_input, year_input)
 
-if __name__ == "__main__":
-    day_input = int(input("Input day: \n"))
-    month_input = int(input("Input month: \n"))
-    year_input = int(input("Input year: \n"))
-    exercise.date_exists(day_input, month_input, year_input)
+string_input = input("Input string: \n")
+key_input = int(input("Input key: \n"))
+encr_str = exercise.xor_cipher(string_input, key_input)
+print("Encrypted string: \n", encr_str)
+print("Decrypted string: \n", exercise.xor_cipher(encr_str, key_input))

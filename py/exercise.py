@@ -120,3 +120,17 @@ if __name__ == "__main__":
 
 
 # EIGHTH EXERCISE
+def xor_cipher(string, key):
+    encrypted_string = ''
+    for letter in string:
+        encrypted_string += chr(ord(letter) ^ key)
+    return encrypted_string
+
+
+if __name__ == "__main__":
+    string_input = input("Input string: \n")
+    key_input = int(input("Input key: \n"))
+    encr_str = xor_cipher(string_input, key_input)
+    print("Encrypted string: \n", encr_str)
+    print("Decrypted string: \n", xor_cipher(encr_str, key_input))
+
